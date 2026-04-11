@@ -13,70 +13,99 @@
     <title>Home</title>
   </head>
   <body>
-    <header>
-      <header>
-        <nav>
-          <div class="logo-container">
-            <p>Aurum Landscapes</p>
-          </div>
-          <div class="nav-center">
-            <ul>
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./about.html">About us</a></li>
-              <li><a href="./services.html">Our Services</a></li>
-              <li><a href="./portfolio.html">Portfolio</a></li>
-              <li><a href="./process.html">The Process</a></li>
-              <li><a href="./journal.html">Journal</a></li>
-              <li><a href="./faqs.html">FAQs</a></li>
-              <li><a href="./contact.html">Contact us</a></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="logo-container">
+          <p>Aurum Landscapes</p>
+        </div>
+
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-center" id="nav-menu">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About us</a></li>
+            <li><a href="./services.html">Our Services</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./process.html">The Process</a></li>
+            <li><a href="./journal.html">Journal</a></li>
+            <li><a href="./faqs.html">FAQs</a></li>
+            <li><a href="./contact.html">Contact us</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
+
     <main>
-      <img
-        src="./images/372.jpg"
-        alt="open lawn garden with patio"
-        class="landing-page-img"
-      />
-      <h1>Home</h1>
+      <section class="hero">
+        <img
+          src="./images/372.jpg"
+          alt="open lawn garden with patio"
+          class="landing-page-img"
+        />
 
-      <p>
-        Welcome to Aurum Landscapes, the premier luxury landscaping firm in the
-        Cotswolds, specializing in bespoke garden design and estate
-        transformations. We create breathtaking outdoor spaces that blend
-        elegance, innovation, and craftsmanship to complement the finest country
-        homes.
-      </p>
+        <div class="hero-content">
+          <div class="hero-inner">
+            <p>
+              <em
+                >Bespoke luxury landscaping across the Cotswolds, <br />
+                designed to elevate exceptional homes and gardens.</em
+              >
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <p>
-        With a meticulous approach and a passion for perfection, our team of
-        expert landscape designers, horticulturists, and artisans work
-        exclusively on projects starting from £100,000. Our mission is to craft
-        timeless landscapes that enhance the beauty of your home while
-        reflecting your vision and lifestyle.
-      </p>
+      <section class="hero-text">
+        <p>
+          Welcome to Aurum Landscapes, the premier luxury landscaping firm in
+          the Cotswolds, specializing in bespoke garden design and estate
+          transformations. We create breathtaking outdoor spaces that blend
+          elegance, innovation, and craftsmanship to complement the finest
+          country homes.
+        </p>
 
-      <p>
-        From sweeping, manicured gardens to architecturally inspired outdoor
-        living spaces, we curate landscapes that stand as works of art. Whether
-        restoring a historic garden or designing an entirely new outdoor
-        sanctuary, we tailor every detail to suit your estate’s character.
-      </p>
+        <p>
+          With a meticulous approach and a passion for perfection, our team of
+          expert landscape designers, horticulturists, and artisans work
+          exclusively on projects starting from £100,000. Our mission is to
+          craft timeless landscapes that enhance the beauty of your home while
+          reflecting your vision and lifestyle.
+        </p>
 
-      <p>
-        At Aurum Landscapes, luxury means exclusivity, attention to detail, and
-        an unwavering commitment to excellence. We take on a select number of
-        projects each year to ensure every client receives our undivided
-        attention.
-      </p>
+        <p>
+          From sweeping, manicured gardens to architecturally inspired outdoor
+          living spaces, we curate landscapes that stand as works of art.
+          Whether restoring a historic garden or designing an entirely new
+          outdoor sanctuary, we tailor every detail to suit your estate’s
+          character.
+        </p>
 
-      <p>
-        Begin your journey to a truly remarkable garden. Contact us today to
-        discuss your vision.
-      </p>
+        <p>
+          At Aurum Landscapes, luxury means exclusivity, attention to detail,
+          and an unwavering commitment to excellence. We take on a select number
+          of projects each year to ensure every client receives our undivided
+          attention.
+        </p>
+
+        <p>
+          Begin your journey to a truly remarkable garden. Contact us today to
+          discuss your vision.
+        </p>
+      </section>
     </main>
-    <footer></footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
