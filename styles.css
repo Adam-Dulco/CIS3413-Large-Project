@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Cormorant Garamond", serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* logo left, menu right */
+  align-items: center; /* vertically center */
+  background-color: rgb(255, 254, 243);
+  padding: 10px 20px;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+}
+
+.logo-container p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.nav-center ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1.5rem; /* nice spacing between links */
+}
+
+.nav-center ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-center ul li a:hover {
+  color: #7a6; /* subtle hover color */
+}
+
+h1,
+h2 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+.landing-page-img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
