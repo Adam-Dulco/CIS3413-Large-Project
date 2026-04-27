@@ -13,12 +13,26 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <header>
-      <nav>
+    <header class="site-header">
+      <nav class="navbar">
         <div class="logo-container">
           <p>Aurum Landscapes</p>
         </div>
-        <div class="nav-center">
+
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-center" id="nav-menu">
           <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a href="./about.html">About us</a></li>
@@ -33,6 +47,13 @@
       </nav>
     </header>
     <main>
+      <section class="hero">
+        <img
+          src="./images/house-and-garden-1/35.jpg"
+          alt="a view from a wooden balcony looking over to a large tree in front of a blue sky"
+          class="landing-page-img"
+        />
+      </section>
       <h1>Portfolio</h1>
 
       <p>
