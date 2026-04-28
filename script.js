@@ -59,3 +59,9 @@ window.addEventListener("scroll", () => {
 
   lastScrollY = currentScrollY;
 });
+
+/*==============*/
+/* CURRENT YEAR */
+/*==============*/
+
+document.getElementById("year").textContent = new Date().getFullYear();
