@@ -65,3 +65,63 @@ window.addEventListener("scroll", () => {
 /*==============*/
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+/*==============*/
+/*   CAROUSEL   */
+/*==============*/
+
+const carousels = document.querySelectorAll(".carousel");
+
+carousels.forEach((carousel) => {
+  const images = carousel.querySelectorAll(".carousel-img");
+  const prevBtn = carousel.querySelector(".prev");
+  const nextBtn = carousel.querySelector(".next");
+  const barsContainer = carousel.querySelector(".carousel-bars");
+
+  let currentIndex = 0;
+
+  images.forEach((_, index) => {
+    const bar = document.createElement("button");
+    bar.classList.add("carousel-bar");
+    bar.type = "button";
+
+    if (index === 0) bar.classList.add("active");
+
+    bar.addEventListener("click", () => {
+      currentIndex = index;
+      showImage(currentIndex);
+    });
+
+    barsContainer.appendChild(bar);
+  });
+
+  const bars = carousel.querySelectorAll(".carousel-bar");
+
+  function showImage(index) {
+    images.forEach((img) => img.classList.remove("active"));
+    bars.forEach((bar) => bar.classList.remove("active"));
+
+    images[index].classList.add("active");
+    bars[index].classList.add("active");
+  }
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex++;
+
+    if (currentIndex >= images.length) {
+      currentIndex = 0;
+    }
+
+    showImage(currentIndex);
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex--;
+
+    if (currentIndex < 0) {
+      currentIndex = images.length - 1;
+    }
+
+    showImage(currentIndex);
+  });
+});
