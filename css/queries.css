@@ -45,6 +45,18 @@
   .remove-space {
     padding-top: 0;
   }
+
+  .grid--3-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .still-have-questions {
+    font-size: 1.8rem;
+  }
+
+  .process-grid {
+    padding-top: 0;
+  }
 }
 
 /*=====================================*/
@@ -145,6 +157,51 @@
   .remove-space {
     padding-top: 0;
   }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    column-gap: 2.4rem;
+    row-gap: 2rem;
+  }
+
+  .process-grid > article:nth-of-type(1) {
+    order: 1;
+  }
+  .process-grid > img:nth-of-type(1) {
+    order: 2;
+  }
+
+  /* Step 2 */
+  .process-grid > article:nth-of-type(2) {
+    order: 3;
+  }
+  .process-grid > img:nth-of-type(2) {
+    order: 4;
+  }
+
+  /* Step 3 */
+  .process-grid > article:nth-of-type(3) {
+    order: 5;
+  }
+  .process-grid > img:nth-of-type(3) {
+    order: 6;
+  }
+
+  /* Step 4 */
+  .process-grid > article:nth-of-type(4) {
+    order: 7;
+  }
+  .process-grid > img:nth-of-type(4) {
+    order: 8;
+  }
+
+  .hero-text .grid--2-cols > p {
+    order: 1;
+  }
+
+  .hero-text .grid--2-cols > img {
+    order: 2;
+  }
 }
 
 /*======================*/
@@ -155,7 +212,7 @@
     font-size: 2.5rem;
   }
 
-  h2{
+  h2 {
     font-size: 2rem !important;
   }
 
