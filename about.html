@@ -64,10 +64,10 @@
         </article>
       </section>
 
-      <section class="hero-text">
+      <section class="hero-text grid-gap-reducer-tablet">
         <h1>About us</h1>
 
-        <article class="grid grid--2-cols">
+        <article class="grid grid--2-cols reduce-grid">
           <p>
             At Aurum Landscapes, we redefine luxury landscaping, blending
             artistry with nature to create outdoor spaces of unparalleled
@@ -75,11 +75,19 @@
             maintaining exquisite gardens for discerning clients who value
             exceptional quality.
           </p>
-          <img src="./images/flowers/25.jpg" alt="a beautiful pink rose" />
+          <img
+            src="./images/flowers/25.jpg"
+            alt="a beautiful pink rose"
+            class="img-opener padding-below"
+          />
         </article>
 
-        <article class="grid grid--2-cols">
-          <img src="./images/people/james-gold.jpg" alt="James Gold" />
+        <article class="grid grid--2-cols reduce-grid">
+          <img
+            src="./images/people/james-gold.jpg"
+            alt="James Gold"
+            class="padding-below-l"
+          />
           <p>
             Our founder, James Gold, has over 30 years of experience in crafting
             high-end landscapes for country homes and grand estates. Supported
@@ -100,14 +108,25 @@
       </section>
 
       <section class="container">
-        <aside class="grid grid--4-cols padding-above-and-below">
+        <aside
+          class="grid grid--4-cols padding-above-and-below padding-below-l"
+        >
           <img
             src="./images/home-page-images/06.jpg"
             alt="cottage and garden"
+            class="img-opener"
           />
-          <img src="./images/home-page-images/7.jpg" alt="patio garden" />
-          <img src="./images/patio/patio5.jpeg" alt="" />
-          <img src="./images/water-feature-images/5.JPG" alt="" />
+          <img
+            src="./images/home-page-images/7.jpg"
+            alt="patio garden"
+            class="img-opener"
+          />
+          <img src="./images/patio/patio5.jpeg" alt="" class="img-opener" />
+          <img
+            src="./images/water-feature-images/5.JPG"
+            alt=""
+            class="img-opener"
+          />
         </aside>
       </section>
 
@@ -124,8 +143,20 @@
           We take pride in our exclusive, client-focused approach, ensuring each
           garden we design is as unique as the property it adorns. If you seek a
           landscape that embodies sophistication, tranquillity, and bespoke
-          artistry, we invite you to discover what sets us apart.
+          artistry, we invite you to
+          <span class="contact-us-small-font">discover</span> what sets us
+          apart.
         </p>
+      </section>
+
+      <!-- IMAGE EXPANDER -->
+      <section class="lightbox" id="lightbox">
+        <aside class="lightbox-content">
+          <button class="lightbox-close glass" id="lightbox-close">✕</button>
+          <button class="lightbox-nav prev-lightbox" type="button">‹</button>
+          <img id="lightbox-img" src="#" alt="#" />
+          <button class="lightbox-nav next-lightbox" type="button">›</button>
+        </aside>
       </section>
     </main>
     <footer>

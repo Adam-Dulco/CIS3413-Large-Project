@@ -125,3 +125,101 @@ carousels.forEach((carousel) => {
     showImage(currentIndex);
   });
 });
+
+/*=======================*/
+/* LIGHTBOX IMAGE OPENER */
+/*=======================*/
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+const closeBtn = document.getElementById("lightbox-close");
+
+const nextBtn = document.querySelector(".next-lightbox");
+const prevBtn = document.querySelector(".prev-lightbox");
+
+const images = document.querySelectorAll(
+  ".bespoke-garden-design img, .garden-item img, .carousel-img, .before-after-grid img, .img-opener",
+);
+
+let currentIndex = 0;
+
+function showImage(index) {
+  lightboxImg.src = images[index].src;
+  lightboxImg.alt = images[index].alt || "";
+}
+
+function openLightbox(index) {
+  currentIndex = index;
+
+  showImage(currentIndex);
+
+  lightbox.classList.add("active");
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("active");
+}
+
+function showNextImage() {
+  currentIndex++;
+
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+
+  showImage(currentIndex);
+}
+
+function showPrevImage() {
+  currentIndex--;
+
+  if (currentIndex < 0) {
+    currentIndex = images.length - 1;
+  }
+
+  showImage(currentIndex);
+}
+
+images.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    openLightbox(index);
+  });
+});
+
+nextBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  showNextImage();
+});
+
+prevBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  showPrevImage();
+});
+
+closeBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  closeLightbox();
+});
+
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    closeLightbox();
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (!lightbox.classList.contains("active")) return;
+
+  if (e.key === "Escape") {
+    closeLightbox();
+  }
+
+  if (e.key === "ArrowRight") {
+    showNextImage();
+  }
+
+  if (e.key === "ArrowLeft") {
+    showPrevImage();
+  }
+});

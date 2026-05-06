@@ -78,6 +78,11 @@
     grid-template-columns: 1fr;
   }
 
+  .reduce-grid {
+    row-gap: 0rem;
+    align-items: center;
+  }
+
   .burger {
     display: block;
   }
@@ -202,6 +207,24 @@
   .hero-text .grid--2-cols > img {
     order: 2;
   }
+
+  .testimonials-section p {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+  }
+
+  .portfolio-explore-quote {
+    padding: 3.2rem !important;
+  }
+
+  .testimonials-section {
+    margin-top: 1.2rem !important;
+  }
+
+  .wider-content {
+    padding: 2rem 2rem 2rem 2rem;
+  }
 }
 
 /*======================*/
@@ -259,5 +282,11 @@
 
   .remove-space {
     padding-top: 0;
+  }
+
+  .end-note {
+    text-align: center;
+    padding: 1rem 0 3rem;
+    font-size: 1.6rem;
   }
 }
