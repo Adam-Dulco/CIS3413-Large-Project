@@ -223,24 +223,3 @@ document.addEventListener("keydown", (e) => {
     showPrevImage();
   }
 });
-
-/*===================*/
-/* SCREEN PRE-LOADER */
-/*===================*/
-window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-
-  // already shown during this browser session
-  if (sessionStorage.getItem("aurumPreloaderShown")) {
-    preloader.style.display = "none";
-    return;
-  }
-
-  // first visit this session
-  sessionStorage.setItem("aurumPreloaderShown", "true");
-
-  // fade out loader
-  setTimeout(() => {
-    preloader.classList.add("hidden");
-  }, 4000);
-});
